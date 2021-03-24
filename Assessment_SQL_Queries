@@ -1,0 +1,31 @@
+
+Creating Table from Customer with all given details:
+
+create table customer
+(
+Customer_Name varchar(255),
+Customer_Id varchar(18),
+Open_Date date,
+Last_Consulted_Date date,
+Vaccination_Id char(5),
+Dr_Name char(255) NULL,
+State char(5),
+Country char(5),
+DOB date,
+Is_Active char(1)
+)
+
+Inserting data as per given data:
+
+insert into customer()
+values("Alex", "123457", str_to_date("2010-10-12 ", "%Y-%m-%d"),str_to_date("2012-10-13 ", "%Y-%m-%d"), "MVD", "Paul", "SA", "USA", str_to_date("6-03-1987 ", "%d-%m-%Y"), "A")
+
+insert into customer()
+values("John", "123458", str_to_date("2010-10-12 ", "%Y-%m-%d"),str_to_date("2012-10-13 ", "%Y-%m-%d"), "MVD", NULL, "TN", "IND", str_to_date("6-03-1987 ", "%d-%m-%Y"), "A")
+
+Creating another table for Country India:
+
+create table Table_India as
+select * from customer
+where Country="IND"
+
